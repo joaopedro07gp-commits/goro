@@ -1,0 +1,307 @@
+<!DOCTYPE html><html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Checkout | Goró Mansão</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#9a8ca2",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-secondary-fixed": "#022100",
+                        "on-secondary-fixed-variant": "#095300",
+                        "inverse-surface": "#e5e2e1",
+                        "primary-fixed-dim": "#dfb7ff",
+                        "secondary-fixed-dim": "#2ae500",
+                        "surface-bright": "#3a3939",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "on-primary-container": "#f7e5ff",
+                        "tertiary": "#c8c6c5",
+                        "on-background": "#e5e2e1",
+                        "surface-container-low": "#1c1b1b",
+                        "primary-container": "#9d00ff",
+                        "on-tertiary-container": "#eeebea",
+                        "surface-container-highest": "#353534",
+                        "surface-dim": "#131313",
+                        "on-primary": "#4b007e",
+                        "inverse-on-surface": "#313030",
+                        "background": "#131313",
+                        "secondary-fixed": "#79ff5b",
+                        "on-error": "#690005",
+                        "inverse-primary": "#8c00e5",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-surface-variant": "#d1c1d9",
+                        "surface": "#131313",
+                        "on-surface": "#e5e2e1",
+                        "outline-variant": "#4e4356",
+                        "primary-fixed": "#f1daff",
+                        "secondary": "#d7ffc5",
+                        "error": "#ffb4ab",
+                        "tertiary-container": "#6b6a6a",
+                        "on-secondary-container": "#0f6d00",
+                        "surface-container": "#201f1f",
+                        "error-container": "#93000a",
+                        "on-primary-fixed-variant": "#6b00b0",
+                        "on-primary-fixed": "#2d004f",
+                        "primary": "#dfb7ff",
+                        "surface-tint": "#dfb7ff",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary": "#313030",
+                        "surface-variant": "#353534",
+                        "secondary-container": "#2ff801",
+                        "on-secondary": "#053900"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Be Vietnam Pro"],
+                        "h3": ["Space Grotesk"],
+                        "body-lg": ["Be Vietnam Pro"],
+                        "label-caps": ["Space Grotesk"],
+                        "h1": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "h3": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h1": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                        "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .neon-border {
+            border: 1px solid transparent;
+            background: linear-gradient(to right, #131313, #131313) padding-box,
+                        linear-gradient(to right, #9d00ff, #2ff801) border-box;
+        }
+        .glass-panel {
+            background: rgba(20, 20, 20, 0.7);
+            backdrop-filter: blur(20px);
+        }
+        .purple-glow {
+            box-shadow: 0 0 20px rgba(157, 0, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen">
+<!-- Top Bar Navigation (Simplified for Checkout) -->
+<nav class="bg-black/20 backdrop-blur-xl border-b border-white/10 sticky top-0 z-50">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="font-space-grotesk tracking-tighter uppercase text-2xl font-black italic text-purple-500 drop-shadow-[0_0_10px_rgba(157,0,255,0.8)]" style="">
+                Goró Mansão
+            </div>
+<div class="flex items-center gap-4">
+<span class="text-label-caps font-label-caps text-on-surface-variant flex items-center gap-2" style="">
+<span class="material-symbols-outlined text-secondary-container" data-icon="lock" style="font-variation-settings: &quot;FILL&quot; 1;">lock</span>
+                    CHECKOUT SEGURO
+                </span>
+</div>
+</div>
+</nav>
+<main class="max-w-6xl mx-auto px-4 md:px-8 py-8 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+<!-- Left Column: Checkout Process -->
+<div class="lg:col-span-7 space-y-12">
+<!-- Express Checkout -->
+<section>
+<h2 class="font-h3 text-h3 mb-6 uppercase tracking-tight" style="">Express Checkout</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 bg-white text-black font-bold py-4 rounded-lg hover:opacity-90 transition-all scale-95 active:opacity-80" style="">
+<span class="material-symbols-outlined" data-icon="account_balance_wallet" style="">account_balance_wallet</span>
+                        Apple Pay
+                    </button>
+<button class="flex items-center justify-center gap-2 bg-[#F7C033] text-[#2C2E2F] font-bold py-4 rounded-lg hover:opacity-90 transition-all scale-95 active:opacity-80" style="">
+<span class="material-symbols-outlined" data-icon="payments" style="">payments</span>
+                        PayPal
+                    </button>
+</div>
+<div class="relative flex py-8 items-center">
+<div class="flex-grow border-t border-outline-variant"></div>
+<span class="flex-shrink mx-4 text-on-tertiary-fixed-variant font-label-caps text-label-caps" style="">OU CONTINUAR COM CARTÃO</span>
+<div class="flex-grow border-t border-outline-variant"></div>
+</div>
+</section>
+<!-- Form Sections -->
+<form class="space-y-10">
+<!-- Shipping -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold" style="">1</span>
+<h2 class="font-h3 text-h3 uppercase" style="">Envio</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">E-MAIL PARA RASTREIO</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="seu@email.com" type="email">
+</div>
+<div class="md:col-span-2">
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">ENDEREÇO COMPLETO</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="Rua, número, complemento" type="text">
+</div>
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">CEP</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="00000-000" type="text">
+</div>
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">CIDADE</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="Sua Cidade" type="text">
+</div>
+</div>
+</section>
+<!-- Payment -->
+<section>
+<div class="flex items-center gap-4 mb-8">
+<span class="w-8 h-8 rounded-full bg-primary-container text-on-primary flex items-center justify-center font-bold" style="">2</span>
+<h2 class="font-h3 text-h3 uppercase" style="">Pagamento</h2>
+</div>
+<div class="neon-border p-6 rounded-xl glass-panel space-y-6">
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">NÚMERO DO CARTÃO</label>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="0000 0000 0000 0000" type="text">
+<div class="absolute right-0 top-4 flex gap-2">
+<span class="material-symbols-outlined text-outline" data-icon="credit_card" style="">credit_card</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">VALIDADE</label>
+<input class="w-full bg-transparent border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="MM/AA" type="text">
+</div>
+<div>
+<label class="block text-label-caps font-label-caps text-on-surface-variant mb-2" style="">CVV</label>
+<input class="w-full bg-transparent border-0 border-b border-purple-900/50 focus:border-secondary-container focus:ring-0 text-body-lg py-4 transition-all" placeholder="123" type="text">
+</div>
+</div>
+</div>
+</section>
+<!-- Action Button -->
+<button class="w-full bg-primary-container text-on-primary-container font-h2 text-h2 py-6 rounded-xl hover:brightness-110 purple-glow transition-all uppercase tracking-tighter italic font-black" type="submit" style="">
+                    Finalizar Compra
+                </button>
+</form>
+</div>
+<!-- Right Column: Sidebar Summary -->
+<div class="lg:col-span-5">
+<div class="sticky top-28 space-y-8">
+<!-- Order Summary -->
+<div class="bg-surface-container-high rounded-2xl p-8 border border-white/5 shadow-2xl">
+<h3 class="font-h3 text-h3 uppercase mb-6 text-primary" style="">Seu Pack</h3>
+<div class="space-y-6 mb-8">
+<div class="flex items-center gap-4">
+<div class="w-20 h-20 bg-surface-container-highest rounded-lg overflow-hidden relative">
+<img class="w-full h-full object-cover" data-alt="Premium sleek black and neon energy drink bottle mockup with purple condensation and dramatic cyber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFeMUcK4TyFjtB31nTDsapTTa1-hDton5ySrWvzesj8PdQmQRjTiRnsDWDzm8MGF95tCdbp4Q3RQIRkbf1Z3GFpaSm_4fpz9EER-PUgLJTV5WxsdW6i-BDG-ZgOxlnLEVihWivH6ru01Gqg2D_3lIDV-l_aUnW5GIPAIress8JFwohKVHkU6tN5c5v1GEiqvFjohRvf9FJtAWHEfm1Q4mQdLk8NqMV5cn6y2I-7K4gq0m6TtxxrhFWMWCHzvV-ZbcF-WPvv98FtzNe" style="">
+</div>
+<div class="flex-grow">
+<p class="font-bold text-body-lg uppercase" style="">Goró Mansão Original</p>
+<p class="text-on-surface-variant text-body-md" style="">Pack c/ 12 unidades</p>
+</div>
+<span class="font-bold" style="">R$ 14,90</span>
+</div>
+</div>
+<div class="space-y-3 border-t border-white/10 pt-6">
+<div class="flex justify-between text-on-surface-variant">
+<span class="" style="">Subtotal</span>
+<span class="" style="">R$ 14,90</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span class="" style="">Frete</span>
+<span class="text-secondary-container" style="">Grátis</span>
+</div>
+<div class="flex justify-between text-h3 font-h3 uppercase pt-4">
+<span class="" style="">Total</span>
+<span class="text-secondary-container" style="">R$ 14,90</span>
+</div>
+</div>
+</div>
+<!-- Benefits Cards (Bento style) -->
+<div class="grid grid-cols-1 gap-4">
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-secondary-container flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary-container text-3xl" data-icon="bolt" style="font-variation-settings: &quot;FILL&quot; 1;">bolt</span>
+<div>
+<p class="font-bold text-label-caps uppercase" style="">Energy Without Risk</p>
+<p class="text-on-surface-variant text-sm mt-1" style="">Fórmula limpa. Zero crash, foco máximo para o seu treino ou corre diário.</p>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-primary-container flex items-start gap-4">
+<span class="material-symbols-outlined text-primary-container text-3xl" data-icon="verified" style="font-variation-settings: &quot;FILL&quot; 1;">verified</span>
+<div>
+<p class="font-bold text-label-caps uppercase" style="">Mansão Maromba Verified</p>
+<p class="text-on-surface-variant text-sm mt-1" style="">Qualidade testada e aprovada pelos monstros. Exclusividade garantida.</p>
+</div>
+</div>
+<div class="bg-surface-container p-6 rounded-xl border-l-4 border-outline flex items-start gap-4">
+<span class="material-symbols-outlined text-outline text-3xl" data-icon="local_shipping" style="font-variation-settings: &quot;FILL&quot; 1;">local_shipping</span>
+<div>
+<p class="font-bold text-label-caps uppercase" style="">Entrega Expressa</p>
+<p class="text-on-surface-variant text-sm mt-1" style="">Envio em 24h para todo o Brasil. O goró chega gelado no seu radar.</p>
+</div>
+</div>
+</div>
+<!-- Trust Badges -->
+<div class="flex justify-center gap-6 opacity-40 grayscale hover:grayscale-0 hover:opacity-100 transition-all">
+<img alt="Visa" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAINauMmJ1DMTsKXCADsM52yPkvfyzTPl958vs4cNe0sVrsghOdpxDCGFmkCker6SLRWDsIXphGSeUtn-ZyZGNyAojEU8owJYMmPqirupV2v2DcuOv7Qj-ZV1kWlq7aeCW4KU9-qG1mkJWrGkQYu70J9GKEkcqdxdVBEJsn5h_bMduUGSmyaVcPjdCWH82kMhzb-hx8jZt3OagDfLDmB1H75HG2wSnhd2TIpEE7rz-bsQFB787QoJ2WyUknlURb3ScjqM6SqJedkYLd" style="">
+<img alt="Mastercard" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpS1dxCpFYQsSTKNzsJhEvHuDyn8KyNPfsVMiHK_gic2ns6JmsV-XdvwNnYKJ4th5T6ElWCRfjX1itHo4Qdb6O2T_znMcKvtru5I-wkP6V_UKYHA6Kf5fZ5p8NjtrXvN1iw0T4PkMfdp8kuC3x9YYK4CEnemPlW2sL-fOVDsaLMDgvuwiMwa9jMFegCxoOOWKdv7yCxJKpR4Hw8hEwkNrgJxF4Y13ZMT-q83Hx-q22TYe6uCAXauiq9dWHCl1qRMAHfQuHTPdntuxp" style="">
+<img alt="Amex" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkv1-FfUrgQFkT6WBMMiG5krK_mlMnVu4H5_I0QVolzir3UDdTBNS29I2GBLMsj_H8-5yPiMlgvSP4BkiEYcGpR9vskU6jJLANSw7g8rHLqALE6XCVxYtW-aufMd9ymSXPU372NsSSY8BXNUNJsgoXZ_k6Obam4OCIMOfyMKxQj0wNf_w4GB5helaKkxPf9Yp8qHKhE45BViruF7b8Q739CPGr1-71RTkRq-KoVXzVYSCRuC8OcSs7QsapVIFB4jIsp_hA8MN_iZrp" style="">
+<img alt="Pix" class="h-8" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDkElP_fymEQXZjVWIpmrp_Upn3OcC6OkMKVtf5EGBWn2rEggjXbb2-ux0ZSX87imPpL-TShF8NJ2C0DOMn6_JkqNcMbOhDp5bu0dVKWMP0NCiOVZIuTskJiP3GWzuSRSVNsbyaChF7whI4VmLV_rpGu-EPFQabvwSANs20csHkRIEMUlbpx5P0z2kv96ul1XWDgfz-3pj21E3tOf2anjZwTlTv_LJ80AG6NWw7Z2nhRb75b1p7sHV2gDRAoazJdT3DJpEfd5P0g3NY" style="">
+</div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-black border-t border-purple-900/30 w-full pt-20 pb-10 mt-12">
+<div class="flex flex-col items-center gap-8 px-8 w-full">
+<div class="text-4xl font-black text-white opacity-20 font-space-grotesk italic tracking-widest uppercase" style="">
+                GORÓ MANSÃO
+            </div>
+<div class="flex flex-wrap justify-center gap-8 text-label-caps font-label-caps text-gray-500">
+<a class="hover:text-purple-400 transition-colors" href="#" style="">Assine o Corre</a>
+<a class="hover:text-purple-400 transition-colors" href="#" style="">Privacy</a>
+<a class="hover:text-purple-400 transition-colors" href="#" style="">Terms</a>
+<a class="hover:text-purple-400 transition-colors" href="#" style="">Support</a>
+</div>
+<p class="text-label-caps font-label-caps text-gray-600 text-center uppercase tracking-widest" style="">
+                © 2024 GORÓ MANSÃO - EXCLUSIVO MANSÃO MAROMBA
+            </p>
+</div>
+</footer>
+<!-- Ticker Tape -->
+<div class="fixed bottom-0 w-full bg-secondary-container py-1 overflow-hidden z-40">
+<div class="flex whitespace-nowrap animate-marquee">
+<span class="font-label-caps text-on-secondary px-4 text-xs font-black" style="">EXCLUSIVO MANSÃO MAROMBA • ENERGY WITHOUT RISK • FÓRMULA LIMPA • MÁXIMO FOCO • </span>
+<span class="font-label-caps text-on-secondary px-4 text-xs font-black" style="">EXCLUSIVO MANSÃO MAROMBA • ENERGY WITHOUT RISK • FÓRMULA LIMPA • MÁXIMO FOCO • </span>
+<span class="font-label-caps text-on-secondary px-4 text-xs font-black" style="">EXCLUSIVO MANSÃO MAROMBA • ENERGY WITHOUT RISK • FÓRMULA LIMPA • MÁXIMO FOCO • </span>
+<span class="font-label-caps text-on-secondary px-4 text-xs font-black" style="">EXCLUSIVO MANSÃO MAROMBA • ENERGY WITHOUT RISK • FÓRMULA LIMPA • MÁXIMO FOCO • </span>
+</div>
+</div>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 20s linear infinite;
+        }
+    </style>
+</body></html>

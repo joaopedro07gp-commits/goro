@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="pt-BR"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "outline": "#9a8ca2",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-secondary-fixed": "#022100",
+                      "on-secondary-fixed-variant": "#095300",
+                      "inverse-surface": "#e5e2e1",
+                      "primary-fixed-dim": "#dfb7ff",
+                      "secondary-fixed-dim": "#2ae500",
+                      "surface-bright": "#3a3939",
+                      "on-tertiary-fixed": "#1c1b1b",
+                      "on-primary-container": "#f7e5ff",
+                      "tertiary": "#c8c6c5",
+                      "on-background": "#e5e2e1",
+                      "surface-container-low": "#1c1b1b",
+                      "primary-container": "#9d00ff",
+                      "on-tertiary-container": "#eeebea",
+                      "surface-container-highest": "#353534",
+                      "surface-dim": "#131313",
+                      "on-primary": "#4b007e",
+                      "inverse-on-surface": "#313030",
+                      "background": "#131313",
+                      "secondary-fixed": "#79ff5b",
+                      "on-error": "#690005",
+                      "inverse-primary": "#8c00e5",
+                      "tertiary-fixed": "#e5e2e1",
+                      "tertiary-fixed-dim": "#c8c6c5",
+                      "on-error-container": "#ffdad6",
+                      "on-tertiary-fixed-variant": "#474746",
+                      "on-surface-variant": "#d1c1d9",
+                      "surface": "#131313",
+                      "on-surface": "#e5e2e1",
+                      "outline-variant": "#4e4356",
+                      "primary-fixed": "#f1daff",
+                      "secondary": "#d7ffc5",
+                      "error": "#ffb4ab",
+                      "tertiary-container": "#6b6a6a",
+                      "on-secondary-container": "#0f6d00",
+                      "surface-container": "#201f1f",
+                      "error-container": "#93000a",
+                      "on-primary-fixed-variant": "#6b00b0",
+                      "on-primary-fixed": "#2d004f",
+                      "primary": "#dfb7ff",
+                      "surface-tint": "#dfb7ff",
+                      "surface-container-high": "#2a2a2a",
+                      "on-tertiary": "#313030",
+                      "surface-variant": "#353534",
+                      "secondary-container": "#2ff801",
+                      "on-secondary": "#053900"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "unit": "8px",
+                      "margin": "40px",
+                      "gutter": "24px",
+                      "section-gap": "120px"
+              },
+              "fontFamily": {
+                      "body-md": ["Be Vietnam Pro"],
+                      "h3": ["Space Grotesk"],
+                      "body-lg": ["Be Vietnam Pro"],
+                      "label-caps": ["Space Grotesk"],
+                      "h1": ["Space Grotesk"],
+                      "h2": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "h3": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "h1": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(19, 19, 19, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(157, 0, 255, 0.2);
+        }
+        .neon-glow-purple {
+            box-shadow: 0 0 15px rgba(157, 0, 255, 0.5);
+        }
+        .neon-glow-green {
+            box-shadow: 0 0 15px rgba(47, 248, 1, 0.5);
+        }
+        .bubble {
+            position: absolute;
+            background: radial-gradient(circle at center, rgba(255,255,255,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-[#0A0A0A] text-on-surface font-body-md overflow-x-hidden selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="bg-black/20 backdrop-blur-xl docked full-width top-0 sticky z-50 border-b border-white/10 shadow-[0_4_20px_rgba(157,0,255,0.1)]">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black italic text-purple-500 drop-shadow-[0_0_10px_rgba(157,0,255,0.8)] font-space-grotesk tracking-tighter uppercase">
+                Goró Mansão
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-space-grotesk tracking-tighter uppercase text-purple-400 border-b-2 border-green-400 pb-1 transition-all duration-300" href="#">Shop</a>
+<a class="font-space-grotesk tracking-tighter uppercase text-white/70 hover:text-green-400 transition-all duration-300" href="#">Community</a>
+<a class="font-space-grotesk tracking-tighter uppercase text-white/70 hover:text-green-400 transition-all duration-300" href="#">Rewards</a>
+<a class="font-space-grotesk tracking-tighter uppercase text-white/70 hover:text-green-400 transition-all duration-300" href="#">The Mansion</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-white/70 hover:text-green-400 scale-95 active:opacity-80 transition-all">shopping_bag</button>
+<button class="material-symbols-outlined text-white/70 hover:text-green-400 scale-95 active:opacity-80 transition-all">person</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden">
+<!-- Bubbles Effect Background -->
+<div class="absolute inset-0 z-0 opacity-30">
+<div class="bubble w-4 h-4 left-[10%] bottom-[20%]"></div>
+<div class="bubble w-8 h-8 left-[30%] bottom-[10%]"></div>
+<div class="bubble w-6 h-6 left-[60%] bottom-[40%]"></div>
+<div class="bubble w-12 h-12 left-[80%] bottom-[15%]"></div>
+</div>
+<div class="container mx-auto px-6 relative z-10 flex flex-col items-center">
+<h1 class="font-h1 text-h1 text-center mb-6 leading-none flex flex-col items-center">
+<span class="text-white">SABOR ENERGÉTICO</span>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary-container via-secondary-container to-primary-container drop-shadow-[0_0_15px_rgba(157,0,255,0.6)]">
+                    ORIGINAL, 100% VIBE
+                </span>
+</h1>
+<p class="font-body-lg text-body-lg text-tertiary text-center max-w-2xl mb-12">
+                O Goró do Pai: Sem cafeína, sem taurina, só o <span class="text-secondary-fixed italic font-bold">shape inexplicável</span>.
+            </p>
+<div class="relative w-full max-w-lg aspect-square mb-[-120px] transition-transform hover:scale-105 duration-700">
+<div class="absolute inset-0 bg-gradient-to-t from-primary-container/20 to-transparent blur-[120px] rounded-full"></div>
+<img alt="Goró Can" class="w-full h-full object-contain relative z-20 drop-shadow-[0_0_40px_rgba(157,0,255,0.4)]" data-alt="Hyper-realistic 3D mockup of a sleek energy drink can, black matte finish with vibrant purple and neon green accents, 'GORÓ' logo in bold futuristic typography, glowing liquid droplets, floating in a dark cinematic space with purple ambient light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPYvZ3x-OJi9hcmZ2ztH8tF4I2f-c1kR8C5jkukIndWonG_82WFNo1WHbLYZJcND2pNKf5g7HJUtihe1EFWauXHTK6fqSfjI2uJkqfSzscuTMW4K8DMPwV5GK4rZI68KfSD82gONWZGR_n6hi_CpLXBARS1EJJymTfgdbG2uTJXCYuQ8NwjFSy1AWYQdvzm-eHaFS1yjifpFZlrAN2KdkTfUlMYF3d82JhCJK9xmAX_mqzT9G81-EI-w2G0x4ofkX3tB6ytz5TTSn_"/>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-12 py-5 rounded-full flex items-center gap-3 neon-glow-purple hover:scale-105 active:scale-95 transition-all z-30">
+                GARANTA O SEU
+                <span class="material-symbols-outlined">bolt</span>
+</button>
+</div>
+<!-- Organic Wave Divider -->
+<div class="absolute bottom-0 left-0 w-full leading-[0]">
+<svg class="relative block w-full h-[120px]" data-name="Layer 1" preserveaspectratio="none" viewbox="0 0 1200 120" xmlns="http://www.w3.org/2000/svg">
+<path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" fill="#131313"></path>
+</svg>
+</div>
+</section>
+<!-- Ticker Tape -->
+<div class="bg-secondary-container py-4 overflow-hidden border-y border-black/10">
+<div class="flex whitespace-nowrap gap-12 font-label-caps text-on-secondary-container tracking-widest uppercase">
+<span>Mansão Maromba Exclusive</span>
+<span>•</span>
+<span>Sem Cafeína</span>
+<span>•</span>
+<span>O Shape Inexplicável</span>
+<span>•</span>
+<span>Goró do Pai</span>
+<span>•</span>
+<span>Mansão Maromba Exclusive</span>
+<span>•</span>
+<span>Sem Cafeína</span>
+<span>•</span>
+<span>O Shape Inexplicável</span>
+<span>•</span>
+<span>Goró do Pai</span>
+</div>
+</div>
+<!-- Bento Grid Features -->
+<section class="py-section-gap bg-surface relative overflow-hidden">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8 glass-card rounded-3xl p-10 flex flex-col justify-between relative overflow-hidden group">
+<div class="relative z-10">
+<h2 class="font-h2 text-h2 text-primary-fixed-dim mb-4">PURÊZA URBANA</h2>
+<p class="text-on-surface-variant text-body-lg max-w-md">Uma fórmula desenvolvida para quem busca performance sem o crash dos estimulantes sintéticos. O Goró é focado em hidratação e foco mental puro.</p>
+</div>
+<div class="absolute top-0 right-0 w-1/2 h-full opacity-20 group-hover:opacity-40 transition-opacity">
+<img alt="Athletic woman in blue fitness apparel posing in front of a wooden wall" class="w-full h-full object-top object-cover" data-alt="Professional photography of a fitness model in a blue athletic jumpsuit, showing back details, against a rustic wooden background, high contrast lighting" src="https://lh3.googleusercontent.com/aida/ADBb0uiDW6ykuNy-w5fFDUF8OGDpgc7cOxxLFnjCUpWrdtGx_OS16ACZSBouhy5a6imlBaPwU9E50YgNI3-VSFZQCqsikjUNT4ZRmRto__P7lf87eJGwtifXaWsPN09KR1A8aW96Ab9Ba9ny7_2dPICnW-gNng8ZkhgmzbRBRvWEgcuUzKEnamgLJ2fbEEQT9kB5mrj9qrrLiYH85lCQAScsBPx9aLKuIx2IqUdD9EDIewzb64s1muKhBfiJgGI_0sA1K86Diz_F-WU1b2w"/>
+</div>
+</div>
+<div class="md:col-span-4 bg-secondary-container rounded-3xl p-10 flex flex-col items-center justify-center text-center group">
+<span class="material-symbols-outlined text-6xl text-on-secondary-container mb-6 scale-110 group-hover:rotate-12 transition-transform">eco</span>
+<h3 class="font-h3 text-h3 text-on-secondary-container mb-2">100% NATURAL</h3>
+<p class="text-on-secondary-fixed-variant">Ingredientes selecionados para o seu shape.</p>
+</div>
+<div class="md:col-span-4 glass-card rounded-3xl p-8 border-secondary-container/30 group">
+<div class="w-12 h-12 rounded-lg bg-secondary-container flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-on-secondary-container">bolt</span>
+</div>
+<h3 class="font-h3 text-h3 text-white mb-4">Energia Real</h3>
+<p class="text-on-surface-variant">Sinta o pump natural sem as palpitações da taurina.</p>
+</div>
+<div class="md:col-span-8 glass-card rounded-3xl overflow-hidden relative group">
+<img alt="Man with tattoos in prayer pose" class="w-full h-full opacity-50 group-hover:scale-110 transition-transform duration-[2000ms] object-top object-cover" data-alt="Studio portrait of a heavily tattooed man with hands together in a prayer-like gesture against a clean white background, reflecting discipline and focus." src="https://lh3.googleusercontent.com/aida/ADBb0uh5nAAIRldZZsU0MlHJGJdFuJ0FSmFZJN1469G-58HGXDcRSyUipRLKsXlXJhofNzhXJo4RI5w7xXdH-nrQDSrv1mVk8ycGugjTLaS11u5zMT4tC_t2MXrNqCu7UZolwKCwFIIynDVuyga6dA8Gy1_YuhQtUiMprnBS6nNmxKE2_M7649SOcErmsqjtaAre_snQ_UMWsVyg5HvEqLigQKKt7tgjK2FKNVebta7kbJFnbXR8uinuky9QKAPhnwSlriCkT5N5mIMGZqQ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-10 flex flex-col justify-end">
+<h2 class="font-h2 text-h2 text-white">THE MANSION LIFE</h2>
+<p class="text-tertiary">Entre para a elite maromba.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Social Proof Section (Grainy Authentic Aesthetic) -->
+<section class="py-section-gap bg-surface-container-lowest relative">
+<div class="absolute inset-0 opacity-5 mix-blend-overlay pointer-events-none" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDAr_jth4VQlcwgPMj0ERK6PGcJkDcgenQPuRw6d-9QZJdiEE7uB2VAGYA9oNS_ujIsUbdX2VxzTxzPYnfZ9D8Wm1dFKHUFsrpqTRw89yhVzdIdcYEGG8VrdP0w7ggwM_snfDGsYhVFt2SheN9b5rTwfMSwrNK8sqMeVo8fKipiz-nOvwy9sV8nLcsYdCgLNR7mLyZpN7Z7DzLjPBwlSKg13621CPXbuLSQmOqTchhVfzkjA13XDr7WgstVsZGRhM9zkC7rDV--1Dco');"></div>
+<div class="container mx-auto px-6">
+<div class="text-center mb-16">
+<span class="font-label-caps text-secondary-fixed-dim uppercase tracking-[0.3em]">Comunidade</span>
+<h2 class="font-h2 text-h2 mt-4">NA MANSÃO COM O PAI</h2>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden border border-white/10 glass-card">
+<img alt="A LATA DO PAI" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uiPVrmn93jSdBCqkcrTcZIb_Mi5cglidBgvQ5c2IxHFPbMiS-jzIx7S9dBj8vnUrZdQfcaD9rTO15-H1GMhMMBiqslupIRWjC9O6FbtWRkHJtcvsYHQD11kwqeGSYLjPy0yyOgBcG3RToYXNchLmZT-gQfiI6duxM1Ix7EKGxFwlRZIL-YWHvj6Iz8c_NgsYduHJBAIcIr-Sg07y-w6p4yym4czma8GzC7CPk4LfBhLX2bIue06vALbXiS8"/>
+</div>
+<p class="font-space-grotesk text-sm uppercase tracking-widest text-center text-tertiary group-hover:text-primary-fixed-dim transition-colors">A LATA DO PAI</p>
+</div>
+<div class="flex flex-col gap-4 group translate-y-8">
+<div class="aspect-[3/4] rounded-xl overflow-hidden border border-white/10 glass-card">
+<img alt="A GARRAFA DO CORRE" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ujwO8VZV5hF7sQMv7rqkdfUio2LM87z41ynLFvXQm-Snl2iBSFoXGzN8OyGyfhuC2ACntosTNjDf2uvGb4bXGKGtfZQIUEwptUo4ldsLbsSCsuMjVggJKVNETpDQfaGdbGGdK9oWOdHiOGBXUdiwpQyjVW29mgm85psqHZnbpGgZopjnQFivHsW6S8TDA5B7QdIrW4lqvjdWbFFctcVPNiZMq6xJAFvSRDrGwEF0LQPCY8xrOn-u0MpH_Ba"/>
+</div>
+<p class="font-space-grotesk text-sm uppercase tracking-widest text-center text-tertiary group-hover:text-primary-fixed-dim transition-colors">A GARRAFA DO CORRE</p>
+</div>
+<div class="flex flex-col gap-4 group">
+<div class="aspect-[3/4] rounded-xl overflow-hidden border border-white/10 glass-card">
+<img alt="DRINK GORÓ PREMIUM" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0uhSuhJbTGpnAwLBm063wM-BC4j8PV3W2AJEeOF2A2iR1I6zhH0hSE6PR0AEnJg7RR40FAPUeog5xdJyH9ZI6lG8Mekg4294xmYu65UlPG61dtMtOaRKbpXJYVZhwxsbpL5qaNZcQUu8pNCeH7xpWocFqrZMYtZt_dQHA5dfcWfjaXtaI9_oil7r0qCHJkHDPQI_iIWm32_82iFniLBnwdqoZFmrxclZm7Mu3n6YG1V0w57HAexbir2Nis8"/>
+</div>
+<p class="font-space-grotesk text-sm uppercase tracking-widest text-center text-tertiary group-hover:text-primary-fixed-dim transition-colors">DRINK GORÓ PREMIUM</p>
+</div>
+<div class="flex flex-col gap-4 group translate-y-8">
+<div class="aspect-[3/4] rounded-xl overflow-hidden border border-white/10 glass-card">
+<img alt="O COPÃO DE 10" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida/ADBb0ugrvkRWX93wSuAOCZgtF5QdpiSzu1p8V_rov6zx553BSpxydGYg1H85gdYNez3Js21_tCyu6XwL_mFn-1U-3a4dyXC1ZPggoQAVweiOGXw29xAWLFCj24MPqrDgz33QnoKW8Wg9tp5LFw0XAQF_DTLGXf9rJBIQtzHtff2JhHmgqTQ9OY45YzeoxXjtKhLL7BUNYamHJr0ZBmSr__oO8oB0TIVsgPf_APLwQaaLHqEv4AR_KudaVdR_dEUr"/>
+</div>
+<p class="font-space-grotesk text-sm uppercase tracking-widest text-center text-tertiary group-hover:text-primary-fixed-dim transition-colors">O COPÃO DE 10</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-black dark:bg-[#050505] w-full pt-20 pb-10 border-t border-purple-900/30">
+<div class="flex flex-col items-center gap-8 px-8 w-full">
+<div class="text-4xl font-black text-white opacity-20 font-space-grotesk tracking-tighter uppercase">
+                GORÓ MANSÃO
+            </div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-space-grotesk text-xs tracking-widest uppercase text-gray-500 hover:text-purple-400 transition-colors focus-within:ring-2 ring-purple-500" href="#">Assine o Corre</a>
+<a class="font-space-grotesk text-xs tracking-widest uppercase text-gray-500 hover:text-purple-400 transition-colors focus-within:ring-2 ring-purple-500" href="#">Privacy</a>
+<a class="font-space-grotesk text-xs tracking-widest uppercase text-gray-500 hover:text-purple-400 transition-colors focus-within:ring-2 ring-purple-500" href="#">Terms</a>
+<a class="font-space-grotesk text-xs tracking-widest uppercase text-gray-500 hover:text-purple-400 transition-colors focus-within:ring-2 ring-purple-500" href="#">Support</a>
+</div>
+<p class="font-space-grotesk text-xs tracking-widest uppercase text-purple-500 dark:text-green-400 mt-8">
+                © 2024 GORÓ MANSÃO - EXCLUSIVO MANSÃO MAROMBA
+            </p>
+</div>
+</footer>
+</body></html>
